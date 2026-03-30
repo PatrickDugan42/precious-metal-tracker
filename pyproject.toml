@@ -1,0 +1,29 @@
+[project]
+name = "precious-metal-tracker"
+version = "0.1.0"
+description = "A precious metal price and personal inventory tracker"
+authors = [
+    {name = "patrick.dugan",email = "patrickdugan42@gmail.com"}
+]
+license = "GPL-3.0"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{include = "precious-metal-tracker", from = "src"}]
+
+[tool.pytest.ini_options]
+testspatchs = ["tests"]
+pythonpath = ["src"]
+
