@@ -1,7 +1,7 @@
 [project]
-name = "precious-metal-tracker"
+name = "personal-tracking-service"
 version = "0.1.0"
-description = "A precious metal price and personal inventory tracker"
+description = "Service for tracking precious metals"
 authors = [
     {name = "patrick.dugan",email = "patrickdugan42@gmail.com"}
 ]
@@ -25,9 +25,12 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-packages = [{include = "precious-metal-tracker", from = "src"}]
+packages = [{include = "tracking-service", from = "src"}]
 
 [tool.pytest.ini_options]
 testspatchs = ["tests"]
 pythonpath = ["src"]
+
+[tool.poetry.scripts]
+tracker-service-run = "tracking-service.main:main"
 
